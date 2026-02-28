@@ -1,6 +1,6 @@
 .footer{
     background-color: rgb(161, 161, 89);
-    padding: 4rem 0;
+    padding: 4rem;
     margin-top: auto;
     border-top: 1px solid rgb(161, 161, 89);
 }
@@ -21,10 +21,11 @@
     transition: color 0.2s;
 }
 .footer-link:hover{
-    color: rgb(49,50,51);
+    color: rgb(30, 135, 240);
 }
 .footer-social{
     display: flex;
+    justify-content: center;
     gap: 1.5rem;
     color: rgb(69, 70, 71)
 }

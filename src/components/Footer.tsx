@@ -1,9 +1,9 @@
 import { Globe, Mail, Share2 } from "lucide-react";
-
+import "./Footer.css"
 function Footer(){
     return(<>
         <footer className="footer">
-            <div className="container footer-conteiner">
+            <div className="footer-container">
                 <div className="footer-links">
                     <a href="#" className="footer-link">Privacy Policy</a>
                     <a href="#" className="footer-link">Terms of Service</a>

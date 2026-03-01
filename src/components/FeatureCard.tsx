@@ -1,3 +1,4 @@
+import './FeatureCard.css';
 interface FeatureCardProps{
     icon: React.ReactNode;
     title: string;

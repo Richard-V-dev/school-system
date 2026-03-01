@@ -1,0 +1,138 @@
+/* ===== HEADER BASE ===== */
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.75); /* slate-900 glass */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===== LOGO ===== */
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.8;
+}
+
+.logo-icon,
+.logo-icon-blue {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+}
+
+.logo-icon-blue {
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  color: white;
+}
+
+/* ===== NAVIGATION ===== */
+
+.header-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #cbd5e1;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+/* underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ===== RIGHT SIDE ICON BUTTONS ===== */
+
+.header-right {
+  display: flex;
+  gap: 12px;
+}
+
+.icon-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.icon-btn:hover {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ===== ACTIVE NAVLINK ===== */
+
+.nav-link.active {
+  color: white;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+}

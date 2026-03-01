@@ -1,18 +1,20 @@
 import { useNavigate } from 'react-router-dom';
 import Button from '../components/common/Button';
 import FeatureCard from '../components/FeatureCard';
-import { BarChart2, Book, BookOpen, FolderHeart } from 'lucide-react';
+import { BarChart2,  BookOpen, FolderHeart } from 'lucide-react';
+import './LadingPage.css';
+import heroImage from "../images/Eduflow.jfif";
 function LandingPage(){
     const navigate = useNavigate();
     return(
     <>
-        <div className="landing-container">
-            <section className="hero-content">
-                <div>
-                    <p>Intelligent ...</p>
-                    <h1>Streamline <br/>your<br/> <span>Classroom</span></h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora quam necessitatibus optio obcaecati sit eos nesciunt explicabo natus? Laborum quam asperiores, veritatis quaerat mollitia sint tempora ea vero culpa alias!</p>
-                    <div>
+        <div className="landing-page">
+            <section className="container hero-section">
+                <div className="hero-content">
+                    <p className="hero-subtitle">Intelligent Education Management</p>
+                    <h1 className='hero-title'>Streamline <br/>your<br/> <span>Classroom</span></h1>
+                    <p className='hero-description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora quam necessitatibus optio obcaecati sit eos nesciunt explicabo natus? Laborum quam asperiores, veritatis quaerat mollitia sint tempora ea vero culpa alias!</p>
+                    <div className='hero-action'>
                         <Button size='lg' onClick={()=>navigate('/dashboard')}>
                             Go to Courses
                         </Button>
@@ -21,13 +23,16 @@ function LandingPage(){
                         </Button>
                     </div>
                 </div>
+                <div className='hero-image-wrapper'>
+                    <img src={heroImage} alt="Image Edu Flow" className='hero-image' />
+                </div>
             </section>
-            <section>
-                <div>
+            <section className='container feature-section'>
+                <div className='feature-header'>
                     <h1>Simplify...</h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti eos incidunt ullam suscipit in, ratione earum facere fugiat maxime illo deleniti iure ut eaque explicabo consequuntur quos soluta? Perferendis, ut!</p>
                 </div>
-                <div>
+                <div className='feature-grid'>
                     <FeatureCard 
                         icon={<BookOpen/>}
                         title='Course Tracking'
@@ -49,4 +54,4 @@ function LandingPage(){
     </>
     );
 }
-export default LandingPage
+export default LandingPage;

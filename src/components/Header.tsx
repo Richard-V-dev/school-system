@@ -1,4 +1,4 @@
-import { LayoutDashboard, Moon, Search, Settings } from "lucide-react";
+import { HardHat, LayoutDashboard, Moon, Search, Settings } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import "./Header.css"
 function Header(){
@@ -10,11 +10,13 @@ function Header(){
                 <div className="header-left">
                     <NavLink to="/" className="logo-link">
                         {isDashboard? (<>
-                            <div className="logo-icon"><LayoutDashboard size={20} className="text-white"/></div>
+                            <div className="logo-icon">
+                                <LayoutDashboard size={20} className="text-white"/>
+                            </div>
                             <span>CourseManager</span>
                         </>):(<>
                             <div className="logo-icon-blue">
-                                <svg></svg>
+                                <HardHat size={20}/>
                             </div>
                             <span className="">EduFlow</span>
                         </>)}
@@ -22,14 +24,14 @@ function Header(){
                 </div>
                 <nav className="header-nav">
                     {isDashboard?(<>
-                        <NavLink to="/dashboard">Dashboard</NavLink>
-                        <NavLink to="/dashboard">Courses</NavLink>
-                        <NavLink to="/">Students</NavLink>
-                        <NavLink to="/">Reports</NavLink>
+                        <NavLink to="/dashboard" className="nav-link">Dashboard</NavLink>
+                        <NavLink to="/dashboard" className="nav-link">Courses</NavLink>
+                        <NavLink to="/" className="nav-link">Students</NavLink>
+                        <NavLink to="/" className="nav-link">Reports</NavLink>
                     </>):(<>
-                        <NavLink to="/">Home</NavLink>
-                        <NavLink to="/dashboard">Courses</NavLink>
-                        <NavLink to="/about">About</NavLink>
+                        <NavLink to="/" className="nav-link">Home</NavLink>
+                        <NavLink to="/dashboard" className="nav-link">Courses</NavLink>
+                        <NavLink to="/about" className="nav-link">About</NavLink>
                     </>)}
                 </nav>
                 <div className="header-right">

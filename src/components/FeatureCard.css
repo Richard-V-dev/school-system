@@ -1,0 +1,56 @@
+/* ===== CARD BASE ===== */
+
+.feature-card {
+  background: rgba(30, 41, 59, 0.6); /* slate-800 glass */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== ICON WRAPPER ===== */
+
+.feature-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 18px auto;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  transition: 0.3s ease;
+}
+
+/* Icon hover animation */
+.feature-card:hover .feature-icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* ===== TITLE ===== */
+
+.feature-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* ===== DESCRIPTION ===== */
+
+.feature-description {
+  font-size: 14px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}

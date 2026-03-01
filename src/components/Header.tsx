@@ -1,4 +1,4 @@
-import { LayoutDashboard, Moon } from "lucide-react";
+import { LayoutDashboard, Moon, Search, Settings } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import "./Header.css"
 function Header(){
@@ -33,7 +33,12 @@ function Header(){
                     </>)}
                 </nav>
                 <div className="header-right">
-                    <button className="icon-btn"><Moon size={18}/></button>
+                    {isDashboard?(<>
+                        <button className="icon-btn"><Search size={18}/></button>
+                        <button className="icon-btn"><Settings size={18}/></button>
+                    </>):(<>
+                        <button className="icon-btn"><Moon size={18}/></button>
+                    </>)}
                 </div>
             </div>
         </header>

@@ -3,7 +3,7 @@ interface CourseCardProps{
     title:string;
     code:string;
     studentsCount:number;
-    description:string;
+    description?:string;
     isActive: boolean;
     imageUrl?: string;
     onToggle: (id:number, active:boolean)=>void;

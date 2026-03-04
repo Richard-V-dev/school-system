@@ -5,4 +5,5 @@ export interface Course{
     studentsCount:number;
     isActive:boolean;
     imageUrl?:string;
+    description?:string;
 }

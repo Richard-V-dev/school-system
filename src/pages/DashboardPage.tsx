@@ -1,9 +1,10 @@
 import { Plus, Star } from "lucide-react";
 import Button from "../components/common/Button";
 import CourseCard from "../components/CourseCard";
+import { useCourseStore } from "../hooks/useCourseStore";
 
 function DashboardPage(){
-    const courses: any[]=[];
+    const {courses, toggleCourseActive } = useCourseStore();
     return (
         <>
             <div className="dashboard-page container">
@@ -38,7 +39,7 @@ function DashboardPage(){
                             isActive={course.isActive}
                             imageUrl={course.imageUrl}
                             description={course.description}
-                            onToggle={()=>void}
+                            onToggle={toggleCourseActive}
                         />
                     </>)}
                 </div>

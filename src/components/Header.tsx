@@ -1,9 +1,15 @@
-import { HardHat, LayoutDashboard, Moon, Search, Settings } from "lucide-react";
+import { HardHat, LayoutDashboard, Moon, Search, Settings, Sun } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import "./Header.css"
+import { ThemeContext } from "../state-management/ThemeContext";
+import { useContext } from "react";
 function Header(){
     const location = useLocation();
     const isDashboard = location.pathname.includes("/dashboard");
+    const themeContext = useContext(ThemeContext);
+    const changeTheme = ()=>{
+        themeContext? themeContext.toggleTheme() : null;
+    };
     return(<>
         <header className="header">
             <div className="header-container">
@@ -39,7 +45,9 @@ function Header(){
                         <button className="icon-btn"><Search size={18}/></button>
                         <button className="icon-btn"><Settings size={18}/></button>
                     </>):(<>
-                        <button className="icon-btn"><Moon size={18}/></button>
+                        <button className="icon-btn" onClick={()=>changeTheme()}>
+                            {themeContext?.theme == 'light'?(<Moon size={18}/>):(<Sun size={18}/>)}
+                        </button>
                     </>)}
                 </div>
             </div>

@@ -4,8 +4,11 @@ import FeatureCard from '../components/FeatureCard';
 import { BarChart2,  BookOpen, FolderHeart } from 'lucide-react';
 import './LadingPage.css';
 import heroImage from "../images/Eduflow.jfif";
+/*import { ThemeContext } from '../state-management/ThemeContext';
+import { useContext } from 'react';*/
 function LandingPage(){
     const navigate = useNavigate();
+    //const themeContext = useContext(ThemeContext);
     return(
     <>
         <div className="landing-page">

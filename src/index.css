@@ -12,14 +12,96 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background-color: #0f172a; /* slate-900 */
-  color: white;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+/* ===== VARIABLES GLOBALES ===== */
+
+/* ===== DARK MODE (default) ===== */
+
+:root {
+
+  /* backgrounds */
+
+  --bg-main: #0f172a;
+  --bg-surface: #1e293b;
+
+  --bg-gradient-1: rgba(99, 102, 241, 0.15);
+  --bg-gradient-2: rgba(139, 92, 246, 0.15);
+
+  /* text */
+
+  --text-main: #ffffff;
+  --text-secondary: #cbd5e1;
+  --text-accent: #a5b4fc;
+
+  /* UI */
+
+  --border-color: #334155;
+  --card-bg: #1e293b;
+
+  /* gradients */
+
+  --title-gradient-1: #6366f1;
+  --title-gradient-2: #8b5cf6;
+
+  /* shadows */
+
+  --image-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+
+  /* scrollbar */
+
+  --scrollbar-track: #0f172a;
+  --scrollbar-thumb: #334155;
+  --scrollbar-thumb-hover: #475569;
 }
+
+
+/* ===== LIGHT MODE ===== */
+
+[data-theme="light"] {
+
+  --bg-main: #f8fafc;
+  --bg-surface: #ffffff;
+
+  --bg-gradient-1: rgba(99, 102, 241, 0.08);
+  --bg-gradient-2: rgba(139, 92, 246, 0.08);
+
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --text-accent: #6366f1;
+
+  --border-color: #e2e8f0;
+  --card-bg: #ffffff;
+
+  --title-gradient-1: #4f46e5;
+  --title-gradient-2: #7c3aed;
+
+  --image-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+  --scrollbar-track: #f1f5f9;
+  --scrollbar-thumb: #cbd5f5;
+  --scrollbar-thumb-hover: #94a3b8;
+}
+
+
+/* ===== BODY ===== */
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+  background-color: var(--bg-main);
+  color: var(--text-main);
+
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+
+  /* transición suave al cambiar tema */
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
 
 /* ===== LINKS ===== */
 
@@ -28,11 +110,14 @@ a {
   color: inherit;
 }
 
+
 /* ===== BUTTON RESET ===== */
 
 button {
   font-family: inherit;
+  cursor: pointer;
 }
+
 
 /* ===== IMAGES ===== */
 
@@ -41,6 +126,7 @@ img {
   display: block;
 }
 
+
 /* ===== SCROLLBAR MODERNA ===== */
 
 ::-webkit-scrollbar {
@@ -48,22 +134,14 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: var(--scrollbar-thumb);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
-}
-
-/* ===== VARIABLES GLOBALES ===== */
-
-:root {
-  --primary-gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
-  --text-muted: #94a3b8;
-  --border-color: rgba(255, 255, 255, 0.05);
+  background: var(--scrollbar-thumb-hover);
 }

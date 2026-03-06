@@ -2,9 +2,11 @@ import { Plus, Star } from "lucide-react";
 import Button from "../components/common/Button";
 import CourseCard from "../components/CourseCard";
 import { useCourseStore } from "../hooks/useCourseStore";
-
+import './DashboardPage.css';
+import { useState } from "react";
 function DashboardPage(){
     const {courses, toggleCourseActive } = useCourseStore();
+    const [view, setView] = useState("grid");
     return (
         <>
             <div className="dashboard-page container">
@@ -15,9 +17,24 @@ function DashboardPage(){
                         </p>
                     </div>
                     <div className="dashboard-controls">
-                        <div className="view-toggle">
-                            <button className="view-btn active">Grid</button>
-                            <button className="view-btn">List</button>
+                        <div className={`view-toggle ${view === "list" ? "list-active" : ""}`}>
+
+                            <span className="view-indicator"></span>
+
+                            <button
+                                className={`view-btn ${view === "grid" ? "active" : ""}`}
+                                onClick={() => setView("grid")}
+                            >
+                                Grid
+                            </button>
+
+                            <button
+                                className={`view-btn ${view === "list" ? "active" : ""}`}
+                                onClick={() => setView("list")}
+                            >
+                                List
+                            </button>
+
                         </div>
                     </div>
                 </div>

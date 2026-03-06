@@ -12,7 +12,7 @@ const INITIAL_COURSES: Course[] = [
         code:"CS101",
         studentsCount:120,
         isActive:true,
-        imageUrl:"https://source.unsplash.com/400x300/?programming"
+        imageUrl:"https://images.unsplash.com/photo-1517694712202-14dd9538aa97"
     },
     {
         id:2,
@@ -20,15 +20,15 @@ const INITIAL_COURSES: Course[] = [
         code:"CS201",
         studentsCount:120,
         isActive:true,
-        imageUrl:"https://source.unsplash.com/400x300/?programming"
+        imageUrl:"https://images.unsplash.com/photo-1551288049-bebda4e38f71"
     },
     {
         id:3,
-        title:"Data Structures",
+        title:"Mathematics for programming",
         code:"CS102",
         studentsCount:80,
         isActive:false,
-        imageUrl:"https://source.unsplash.com/400x300/?datastructures"
+        imageUrl:"https://images.unsplash.com/photo-1509228627152-72ae9ae6848d"
     }
 ];
 export const useCourseStore = create<CourseState>((set)=>(

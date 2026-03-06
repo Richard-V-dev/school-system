@@ -1,0 +1,250 @@
+/* ===== DASHBOARD PAGE ===== */
+
+.dashboard-page {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+/* ===== HEADER ===== */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.dashboard-title-area {
+  max-width: 600px;
+}
+
+.dashboard-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+.dashboard-subtitle {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ===== CONTROLS ===== */
+
+.dashboard-controls {
+  display: flex;
+  align-items: center;
+}
+
+/* ===== VIEW TOGGLE ===== */
+
+.view-toggle {
+  position: relative;
+  display: flex;
+  background: var(--bg-surface);
+  border-radius: 12px;
+  padding: 4px;
+  border: 1px solid var(--border-color);
+  width: 140px;
+}
+
+/* slider que se mueve */
+
+.view-indicator {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+
+  background: var(--card-bg);
+  border-radius: 8px;
+
+  transition: transform 0.25s ease;
+  z-index: 1;
+}
+
+/* cuando el modo LIST está activo */
+
+.view-toggle.list-active .view-indicator {
+  transform: translateX(100%);
+}
+
+/* botones */
+
+.view-btn {
+  flex: 1;
+
+  border: none;
+  background: transparent;
+
+  padding: 8px 0;
+
+  font-size: 14px;
+  color: var(--text-secondary);
+
+  cursor: pointer;
+
+  z-index: 2;
+
+  transition: color 0.2s ease;
+}
+
+.view-btn.active {
+  color: var(--text-main);
+}
+
+.view-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-btn.active {
+  background: var(--card-bg);
+  color: var(--text-main);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.view-btn:hover {
+  color: var(--text-main);
+}
+
+/* ===== COURSE GRID ===== */
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* ===== ADD COURSE CARD ===== */
+
+.add-course-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--card-bg);
+  border: 2px dashed var(--border-color);
+
+  border-radius: 16px;
+
+  padding: 40px 20px;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.add-course-card:hover {
+  border-color: var(--text-accent);
+  transform: translateY(-4px);
+}
+
+.add-course-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 12px;
+
+  background: var(--bg-surface);
+
+  margin-bottom: 16px;
+}
+
+.add-course-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.add-course-subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* ===== GENERATOR BANNER ===== */
+
+.generator-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    var(--title-gradient-1),
+    var(--title-gradient-2)
+  );
+
+  border-radius: 20px;
+
+  padding: 28px 32px;
+
+  color: white;
+
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.generator-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.generator-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.15);
+}
+
+.generator-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.generator-desc {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .generator-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}

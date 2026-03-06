@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useStudentStore } from "../hooks/useStudentStore";
 import type { Student } from "../types/Student";
 import Button from "./common/Button";
+import './AddStudentModal.css';
 interface AddStudentModalProps {
     courseId: number;
     //total: number;

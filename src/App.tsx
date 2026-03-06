@@ -4,6 +4,7 @@ import Layout from './components/Layout'
 import DashboardPage from './pages/DashboardPage'
 import LandingPage from './pages/LandingPage'
 import { ThemeProvider } from './state-management/ThemeContext'
+import CourseStudentPage from './pages/CourseStudentPage'
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
           <Route path='/' element={<Layout/>}>
             <Route index element={<LandingPage/>}/>
             <Route path='dashboard' element={<DashboardPage/>}/>
+            <Route path="courses/:courseId/students" element={<CourseStudentPage/>}></Route>
           </Route>
         </Routes>
       </BrowserRouter>

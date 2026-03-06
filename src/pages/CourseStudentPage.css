@@ -1,0 +1,282 @@
+/* ============================= */
+/* STUDENTS PAGE */
+/* ============================= */
+
+.students-page {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ============================= */
+/* BREADCRUMBS */
+/* ============================= */
+
+.students-breadcrumbs {
+  font-size: 14px;
+  display: flex;
+  gap: 6px;
+  color: var(--text-secondary);
+}
+
+.breadcrumb-link {
+  color: var(--text-accent);
+  font-weight: 500;
+}
+
+.breadcrumb-current {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.students-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.students-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.students-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.students-subtitle {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.students-count {
+  font-weight: 500;
+}
+
+/* ============================= */
+/* HEADER ACTIONS */
+/* ============================= */
+
+.students-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.import-excel-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 14px;
+
+  background: transparent;
+  border: 1px solid var(--text-secondary);
+
+  color: var(--text-main);
+
+  border-radius: 8px;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: all 0.2s ease;
+}
+
+.import-excel-btn:hover {
+  background: var(--bg-gradient-1);
+}
+
+.add-student-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ============================= */
+/* TABLE CONTAINER */
+/* ============================= */
+
+.students-table-container {
+  width: 100%;
+  overflow-x: auto;
+
+  background: var(--bg-main);
+  border-radius: 12px;
+
+  box-shadow: var(--image-shadow);
+}
+
+/* ============================= */
+/* TABLE */
+/* ============================= */
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+/* ============================= */
+/* TABLE HEADER */
+/* ============================= */
+
+.students-table-head {
+  background: var(--bg-gradient-1);
+}
+
+.students-th {
+  text-align: left;
+  padding: 16px 20px;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  color: var(--text-secondary);
+
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ============================= */
+/* TABLE BODY */
+/* ============================= */
+
+.students-row {
+  transition: background 0.15s ease;
+}
+
+.students-row:hover {
+  background: var(--bg-gradient-1);
+}
+
+.students-td {
+  padding: 16px 20px;
+  font-size: 14px;
+  color: var(--text-main);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.students-email {
+  color: var(--text-secondary);
+}
+
+.students-grade {
+  font-weight: 600;
+}
+
+/* ============================= */
+/* ACTION BUTTONS */
+/* ============================= */
+
+.students-actions {
+  min-width: 260px;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  background: transparent;
+  border: none;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+  cursor: pointer;
+
+  padding: 6px 8px;
+  border-radius: 6px;
+
+  transition: all 0.2s ease;
+}
+
+.icon-button:hover {
+  background: var(--bg-gradient-1);
+  color: var(--text-main);
+}
+
+/* ============================= */
+/* GRADE BUTTON */
+/* ============================= */
+
+.grade-action-btn {
+  padding: 6px 10px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: linear-gradient(
+    135deg,
+    var(--title-gradient-1),
+    var(--title-gradient-2)
+  );
+
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: transform 0.15s ease;
+}
+
+.grade-action-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* ============================= */
+/* EMPTY STATE */
+/* ============================= */
+
+.students-empty-row td {
+  text-align: center;
+}
+
+.no-students {
+  padding: 40px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .students-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .students-header-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+}

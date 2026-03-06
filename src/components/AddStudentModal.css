@@ -1,0 +1,189 @@
+/* ===== OVERLAY ===== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+
+  z-index: 1000;
+}
+
+/* ===== MODAL ===== */
+
+.modal-content {
+  width: 100%;
+  max-width: 520px;
+
+  background: var(--card-bg);
+
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+
+  padding: 28px;
+
+  animation: modalEnter .25s ease;
+}
+
+/* ===== HEADER ===== */
+
+.modal-header {
+  margin-bottom: 24px;
+}
+
+.modal-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.modal-header p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* ===== FORM ===== */
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ===== SECTION ===== */
+
+.form-section h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+
+/* ===== FORM GROUP ===== */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* label */
+
+.form-group label {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ===== INPUT ===== */
+
+.form-group input {
+
+  height: 42px;
+
+  padding: 0 12px;
+
+  border-radius: 10px;
+
+  border: 1px solid var(--border-color);
+
+  background: var(--card-bg);
+
+  color: var(--text-main);
+
+  font-size: 14px;
+
+  transition: all .2s ease;
+}
+
+/* placeholder */
+
+.form-group input::placeholder {
+  color: var(--text-secondary);
+}
+
+/* focus */
+
+.form-group input:focus {
+  outline: none;
+
+  border-color: var(--title-gradient-1);
+
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+}
+
+/* ===== ACTIONS ===== */
+
+.modal-actions {
+
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 10px;
+}
+
+/* ===== BUTTONS ===== */
+
+.save-btn {
+
+  background: linear-gradient(
+    135deg,
+    var(--title-gradient-1),
+    var(--title-gradient-2)
+  );
+
+  color: white;
+}
+
+.cancel-btn {
+
+  background: transparent;
+
+  border: 1px solid var(--border-color);
+
+  color: var(--text-secondary);
+}
+
+.cancel-btn:hover {
+
+  border-color: var(--title-gradient-1);
+
+  color: var(--text-main);
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes modalEnter {
+
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width:600px){
+
+  .modal-content{
+    padding:22px;
+  }
+
+}

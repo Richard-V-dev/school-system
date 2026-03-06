@@ -1,4 +1,6 @@
-/* ===== RESET MODERNO ===== */
+/* ================================= */
+/* RESET MODERNO */
+/* ================================= */
 
 *,
 *::before,
@@ -12,19 +14,18 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ===== VARIABLES GLOBALES ===== */
+/* ================================= */
+/* VARIABLES GLOBALES */
+/* ================================= */
 
-/* ===== DARK MODE (default) ===== */
+/* ---------- DARK MODE (default) ---------- */
 
 :root {
 
   /* backgrounds */
 
   --bg-main: #0f172a;
-  --bg-surface: #1e293b;
-
-  --bg-gradient-1: rgba(99, 102, 241, 0.15);
-  --bg-gradient-2: rgba(139, 92, 246, 0.15);
+  --card-bg: #1e293b;
 
   /* text */
 
@@ -34,8 +35,8 @@ html {
 
   /* UI */
 
-  --border-color: #334155;
-  --card-bg: #1e293b;
+  --border-color: rgba(255,255,255,0.08);
+  --table-hover: rgba(255,255,255,0.04);
 
   /* gradients */
 
@@ -54,35 +55,46 @@ html {
 }
 
 
-/* ===== LIGHT MODE ===== */
+/* ---------- LIGHT MODE ---------- */
 
 [data-theme="light"] {
 
-  --bg-main: #f8fafc;
-  --bg-surface: #ffffff;
+  /* backgrounds */
 
-  --bg-gradient-1: rgba(99, 102, 241, 0.08);
-  --bg-gradient-2: rgba(139, 92, 246, 0.08);
+  --bg-main: #f8fafc;
+  --card-bg: #ffffff;
+
+  /* text */
 
   --text-main: #0f172a;
   --text-secondary: #475569;
   --text-accent: #6366f1;
 
-  --border-color: #e2e8f0;
-  --card-bg: #ffffff;
+  /* UI */
+
+  --border-color: rgba(0,0,0,0.08);
+  --table-hover: rgba(0,0,0,0.04);
+
+  /* gradients */
 
   --title-gradient-1: #4f46e5;
   --title-gradient-2: #7c3aed;
 
-  --image-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  /* shadows */
 
-  --scrollbar-track: #f1f5f9;
+  --image-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
+  /* scrollbar */
+
+  --scrollbar-track: #e2e8f0;
   --scrollbar-thumb: #cbd5f5;
   --scrollbar-thumb-hover: #94a3b8;
 }
 
 
-/* ===== BODY ===== */
+/* ================================= */
+/* BODY */
+/* ================================= */
 
 body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
@@ -103,7 +115,9 @@ body {
 }
 
 
-/* ===== LINKS ===== */
+/* ================================= */
+/* LINKS */
+/* ================================= */
 
 a {
   text-decoration: none;
@@ -111,7 +125,9 @@ a {
 }
 
 
-/* ===== BUTTON RESET ===== */
+/* ================================= */
+/* BUTTON RESET */
+/* ================================= */
 
 button {
   font-family: inherit;
@@ -119,7 +135,9 @@ button {
 }
 
 
-/* ===== IMAGES ===== */
+/* ================================= */
+/* IMAGES */
+/* ================================= */
 
 img {
   max-width: 100%;
@@ -127,7 +145,9 @@ img {
 }
 
 
-/* ===== SCROLLBAR MODERNA ===== */
+/* ================================= */
+/* SCROLLBAR MODERNA */
+/* ================================= */
 
 ::-webkit-scrollbar {
   width: 8px;
